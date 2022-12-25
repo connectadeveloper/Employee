@@ -1,15 +1,13 @@
 package com.akash.employee.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(schema = "emp_details")
+//@Table(schema = "emp_details")
 public class EmpDetails {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @Column(name = "name")
     private String name;
